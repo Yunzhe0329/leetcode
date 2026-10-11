@@ -15,7 +15,7 @@ class Solution {
         return result;
     }
 
-    void main() {
+    public static void main(String[] args) {
         Solution sol = new Solution();
         int[] nums1 = new int[] { 1, 2, 3, 4 };
         int[] nums2 = new int[] { 2, 7, 1, 19, 18, 3 };

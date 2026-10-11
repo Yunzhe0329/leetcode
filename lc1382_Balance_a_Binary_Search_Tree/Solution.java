@@ -1,7 +1,6 @@
 package lc1382_Balance_a_Binary_Search_Tree;
 
 import java.util.*;
-import lc1382_Balance_a_Binary_Search_Tree.*;
 
 class Solution {
 
