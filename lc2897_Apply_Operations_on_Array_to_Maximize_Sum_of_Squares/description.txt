@@ -1,0 +1,27 @@
+given a 0-indexed array nums & positive integer k:
+ 
+Example : nums: [2, 6, 5, 8], k = 2
+
+You can do following operation on the array any number of times
+---
+Choose 2 distinct indicies : i and j and simultaneously update the values of 
+
+nums[i] = nums[i] AND nums[j]
+nums[j] = nums[i] OR nums[j]
+
+"AND", "OR" => bitwise operations 
+
+---
+
+have to choose k elements from the final array and calculate the sum of their squares.
+
+return maximum sum of squares
+
+---
+
+Constraints:
+
+1 <= k <= nums.length <= 10^5
+1 <= nums[i] <= 10^9
+
+---
