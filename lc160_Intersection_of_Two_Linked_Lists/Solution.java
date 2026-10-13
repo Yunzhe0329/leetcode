@@ -1,7 +1,5 @@
 package lc160_Intersection_of_Two_Linked_Lists;
 
-import java.util.List;
-
 class ListNode {
     int val;
     ListNode next;
