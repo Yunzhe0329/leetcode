@@ -1,0 +1,51 @@
+You are given two positive integers num and sum.
+
+---
+
+A positive integer n is good if it satisfies both of the following:
+
+- The number of digits in n is exactly num.
+- The sum of digits in n is exactly sum.
+
+---
+
+The score of a good integer n is the sum of the squares of digits in n.
+
+Return a string denoting the good integer n 
+that achieves the maximum score. 
+If there are multiple possible integers, return the maximum ​​​​​​​one. 
+If no such integer exists, return an empty string.
+
+---
+
+Example 1:
+
+Input: num = 2, sum = 3
+
+Output: "30"
+
+Explanation:
+
+There are 3 good integers: 12, 21, and 30.
+
+- The score of 12 is 1^2 + 2^2 = 5.
+- The score of 21 is 2^2 + 1^2 = 5.
+- The score of 30 is 3^2 + 0^2 = 9.
+
+return 30 because it's the maximum value
+
+---
+
+作法: 不用去算總和，我要讓最後組合出來的數字最大 -> 讓左邊位元的數字最大(0-9)，就可以確保組合
+出的數字最大
+
+不用理會每個位元的平方和，舉下面的例子來說
+
+90 -> 9^2 + 0 ^2 = 81
+54 -> 5^2 + 4^2 = 41
+
+同樣 sum 都是 9 -> 左邊位元數字大就是大數字，所以我們每次 leftmost都選當下可以選的最大值
+組合出來就會是 maximum !
+
+
+
