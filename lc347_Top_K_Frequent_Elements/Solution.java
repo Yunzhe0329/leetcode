@@ -1,4 +1,3 @@
-package lc347_Top_K_Frequent_Elements;
 
 import java.util.*;
 
