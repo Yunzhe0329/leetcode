@@ -7,7 +7,7 @@ class Solution {
     public int[] topKFrequent(int[] nums, int k) {
         // nums = [1,1,1,2,2,3], k = 2
         Map<Integer, Integer> freq = new HashMap<>();
-        // 用 maxheap，頻率高的會在上方
+        // 用 minheap，heap長度大於k時，把頻率低的poll掉
         PriorityQueue<int[]> h = new PriorityQueue<>((a, b) -> Integer.compare(a[0], b[0]));
         for (int num : nums) {
             freq.put(num, freq.getOrDefault(num, 0) + 1);
