@@ -17,6 +17,7 @@ class Solution {
     }
 
     private int compress(char[] arr, int n) {
+        // 用 r 掃描過 char array，用 l 來改寫成壓縮後的array
         int l = 0;
         int r = 0;
 
