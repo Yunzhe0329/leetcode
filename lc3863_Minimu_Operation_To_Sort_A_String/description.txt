@@ -18,21 +18,30 @@ sorted string (a -> z)
 切成 substring 後再進行排序
     - substring 不能是整個 String
 
+---
+case 1 恰好一個最小與最大其中一個就在頭或尾
 
-case 1
-
-"ardc" -> 1 (恰好一個最小與最大其中一個就在頭或尾) 
+"ardc" -> 1 
 
 sort rdc -> "acdr"
 
 只要對其他進行排序就是 sorted string
 
-case 2
+---
 
-"rdca" -> 3 (最大和最小剛好對調)
+case 2 重複、max,min不在頭尾 2operation 
+"shopee"
+"shopee" -> "ehopse"
+"hopse" -> "ehops" -> "eehops"
 
-op1 -> "rdc"先排序 -> "cdra"
+---
 
-op2 -> "ra" 先排序 -> "cdar"
+case 3
 
-op3 -> "cda" 排序 -> "acdr"
+"edc" -> 3 (最大和最小剛好對調且沒有任何重複)
+
+op1 -> "ed" -> "de"
+
+op2 -> "ec" -> "ce"
+
+op3 -> "dc" -> "cde"
