@@ -1,5 +1,7 @@
 package lc1254_Number_of_Closed_island;
 
+// DFS solution
+
 class Solution {
     public int closedIsland(int[][] grid) {
         int m = grid.length;
