@@ -23,6 +23,7 @@ class Solution {
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
         // 往下找左、右子樹，有沒有看到p,q
         // p, q 必定會在 tree 裡面
+        // left, right 都有找到 -> node本身就是LCA
         if (root == null || root == p || root == q) {
             return root;
         }
