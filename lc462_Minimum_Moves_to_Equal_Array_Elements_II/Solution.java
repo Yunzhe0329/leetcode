@@ -5,7 +5,13 @@ import java.util.*;
 class Solution {
     public int minMoves2(int[] nums) {
         Arrays.sort(nums);
-        int median = nums[(nums.length - 1) / 2];
+        int n = nums.length;
+        int median = 0;
+        if (n % 2 == 0) {
+            median = ((nums[n / 2 - 1] + nums[nums.length / 2]) / 2);
+        } else {
+            median = nums[nums.length / 2];
+        }
         int result = 0;
         for (int num : nums) {
             result += Math.abs(num - median);
