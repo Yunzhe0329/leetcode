@@ -33,11 +33,9 @@ class Solution {
             count = 1;
         }
         currMax = Math.max(currMax, node.val);
-
         count += dfs(node.left, currMax);
         count += dfs(node.right, currMax);
-
         return count;
-
     }
+
 }
