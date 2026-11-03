@@ -1,7 +1,5 @@
 // LeetCode 1372. Longest ZigZag Path in a Binary Tree
 
-import java.util.Stack;
-
 class Solution {
     public class TreeNode {
         int val;
@@ -35,6 +33,7 @@ class Solution {
         if (node == null) {
             return;
         }
+        result = Math.max(result, count);
         if (fromLeft) {
             dfs(node.right, false, count + 1);
             dfs(node.left, true, 1);
