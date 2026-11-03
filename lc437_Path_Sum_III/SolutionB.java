@@ -2,7 +2,7 @@ package lc437_Path_Sum_III;
 
 import java.util.*;
 
-class Solution {
+class SolutionB {
     public class TreeNode {
         int val;
         TreeNode left;
