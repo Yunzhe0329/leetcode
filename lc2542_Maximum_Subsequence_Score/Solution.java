@@ -6,22 +6,28 @@ import java.util.*;
 class Solution {
     public long maxScore(int[] nums1, int[] nums2, int k) {
         int n = nums1.length;
-        PriorityQueue<Integer> minHeap = new PriorityQueue<>();
-        int[][] pair = new int[n][2];
-        for (int i = 0; i < n; i++) {
-            pair[i][0] = nums1[i];
-            pair[i][1] = nums2[i];
-        }
-
-        Arrays.sort(pair, (a, b) -> Integer.compare(a[1], b[1]));
-
+        int[][] pairs = new int[n][2];
         long result = 0;
-        long curr = 0;
-
         for (int i = 0; i < n; i++) {
-            curr += pair[i][0];
-            minHeap.offer(pair[i][0]);
+            pairs[i][0] = nums1[i];
+            pairs[i][1] = nums2[i];
         }
+        Arrays.sort(pairs, (a, b) -> Integer.compare(b[1], a[1]));
+        PriorityQueue<Integer> pq = new PriorityQueue<>();
+        long curr = 0;
+        for (int[] p : pairs) {
+            pq.offer(p[0]);
+            curr += p[0];
+
+            if (pq.size() > k) {
+                curr -= pq.poll();
+            }
+
+            if (pq.size() == k) {
+                result = Math.max(result, curr * p[1]);
+            }
+        }
+        return result;
 
     }
 }
