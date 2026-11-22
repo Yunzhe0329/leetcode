@@ -11,15 +11,15 @@ class Solution {
          * int[] postfix = new int[n];
          * prefix[0] = 1;
          * postfix[n - 1] = 1;
-         * 
+         *
          * for (int i = 1; i < n; i++) {
          * prefix[i] = prefix[i - 1] * nums[i - 1];
          * }
-         * 
+         *
          * for (int i = n - 2; i >= 0; i--) {
          * postfix[i] = postfix[i + 1] * nums[i + 1];
          * }
-         * 
+         *
          * int[] result = new int[n];
          * for (int i = 0; i < n; i++) {
          * result[i] = prefix[i] * postfix[i];
@@ -41,10 +41,10 @@ class Solution {
     }
 
     void main() {
-        int[] nums1 = new int[] { 1, 2, 3, 4 };
+        int[] nums1 = new int[] {1, 2, 3, 4};
         IO.println(Arrays.toString(productExceptSelf(nums1))); // [24, 12, 8, 6]
 
-        int[] nums2 = new int[] { -1, 1, 0, -3, 3 };
+        int[] nums2 = new int[] {-1, 1, 0, -3, 3};
         IO.println(Arrays.toString(productExceptSelf(nums2))); // [0, 0, 9, 0, 0]
     }
 }
