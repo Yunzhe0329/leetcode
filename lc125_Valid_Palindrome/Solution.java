@@ -27,5 +27,4 @@ class Solution {
         String s1 = "A man, a plan, a canal: Panama";
         IO.println(isPalindrome(s1));
     }
-
 }
