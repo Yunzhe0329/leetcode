@@ -14,7 +14,7 @@ class Solution {
         while (l < r) {
             int sum = numbers[l] + numbers[r];
             if (sum == target) {
-                return new int[] { l + 1, r + 1 };
+                return new int[] {l + 1, r + 1};
             } else if (sum < target) {
                 l++;
             } else {
@@ -25,13 +25,13 @@ class Solution {
     }
 
     void main() {
-        int[] nums1 = { 2, 7, 11, 15 };
+        int[] nums1 = {2, 7, 11, 15};
         int target1 = 9;
 
-        int[] nums2 = { 2, 3, 4 };
+        int[] nums2 = {2, 3, 4};
         int target2 = 6;
 
-        int[] nums3 = { -1, 0 };
+        int[] nums3 = {-1, 0};
         int target3 = -1;
 
         IO.println(Arrays.toString(twoSum(nums1, target1)));
